@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Thông tin nhân viên";
+    var emp = ViewBag.Employee as demo_model.Models.Employee;
+}
+
+<h2>Thông tin nhân viên</h2>
+<ul>
+    <li>ID: @emp.Id</li>
+    <li>Họ tên: @emp.FullName</li>
+    <li>Giới tính: @emp.Gender</li>
+    <li>Điện thoại: @emp.Phone</li>
+    <li>Email: @emp.Email</li>
+    <li>Lương: @emp.Salary.ToString("N0") VND</li>
+    <li>Trạng thái: @(emp.Status ? "Đang làm" : "Nghỉ việc")</li>
+</ul>
